@@ -1,0 +1,30 @@
+int RR_Algo(){
+    enqueue(0);
+    for(int i=0;i<n;i++){
+        x = front();
+        m1 = min(bt[x],TQ);
+        if(m1==bt[x]){
+            Gc[0][++k] = Gc[0][k-1] + bt[x];
+            bt[x] = 0;
+            p[x] = -1;
+        }
+        //bt,tq,gc,p,at,n,k,
+        else{
+            Gc[0][++k] = Gc[0][k-1] + TQ;
+            bt[x] = bt[x] - TQ;
+        }
+
+        for(int j=0;j<n && a[j]<=Gc[k];j++){
+            if(p[j]!=-1){
+                bool b = isProcessesExist(j);
+                if(!b){
+                    enqueue(j);
+                }
+            }
+        } 
+        x = dequeue();
+        if(p[x] != -1){
+            enqueue(x);
+        }
+    }
+}
