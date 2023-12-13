@@ -96,3 +96,12 @@ void JobCompletionMatrix(int* MemoryBlock, int* Job_Number, int* job, int* If, i
 		printf("\n%d\t%d\t%d\t%s\t%d",MemoryBlock[i],Job_Number[i]+1,job[Job_Number[i]],status,If[i]);
 	}
 }
+
+//10 20 30 10
+//30 15 50 20 
+
+//15 20 30 10
+//30 15 50 20
+
+//15 20 30 10
+//15 20 30 50

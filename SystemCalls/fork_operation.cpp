@@ -1,6 +1,6 @@
 //Program for fork operation 
 #include<stdio.h>
-#include<unist.h>
+#include<unistd.h>
 #include<sys/types.h>
 
 int main(){
